@@ -5,16 +5,23 @@
 </h2>
 <p>
   If the default values ​​(0 - 100) are not used and the two handlers come into
-  contact, they start jumping to different positions. When analysing with dev
-  tools in the browser, I noticed that the handler's left (style) value changes
-  by as much as the min or max value was specified, again depending on which
-  handler was moving. For example, if I have rangeValues: number[] = [18, 366];
-  min: number = 18; max: number = 366; then for example if I move rangeValues[0]
-  to rangeValues[1] handler (from min to max), it will change left of
-  rangeValues[0] handler to 366% and vice versa to 18% if rangeValues[1] handler
-  is moved to the position of rangeValues[0] handler. The same goes if the
-  values ​​are in different positions, but in this case they do not change by
-  max min.
+  contact, they start jumping to different positions.
+</p>
+<p>
+  When analysing with dev tools in the browser, I noticed that the handler's
+  left (style) value changes by as much as the min or max value was specified,
+  again depending on which handler was moving.
+</p>
+<p>
+  For example, if I have rangeValues: number[] = [18, 366]; min: number = 18;
+  max: number = 366;
+</p>
+<p>
+  then for example if I move rangeValues[0] to rangeValues[1] handler (from min
+  to max), it will change left of rangeValues[0] handler to 366% and vice versa
+  to 18% if rangeValues[1] handler is moved to the position of rangeValues[0]
+  handler. The same goes if the values ​​are in different positions, but in this
+  case they do not change by max min.
 </p>
 
 <div style="margin: 10px 20px">
