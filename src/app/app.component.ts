@@ -5,15 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  counter = 0;
-  rangeValues: number[] = [10, 300];
+  rangeValues: number[] = [18, 366];
 
-  onClick() {
-    this.counter++;
-  }
-  ngOnInit() {
-    setTimeout(() => {
-      this.rangeValues = [10, 300];
-    }, 5000);
-  }
+  ngOnInit() {}
 }

@@ -1,18 +1,27 @@
 <h2>PrimeNG Issue Template</h2>
 <h2>
-  Slider: The slider when I reset the values the style of the bar is not
-  modified.
+  Slider: The range slider handler jumps strangely in case the same value of the
+  handlers occurs
 </h2>
 <p>
-  When you reset the values in the range slider the bar style is not modified,
-  but the sliders do return to the set position.
+  If the default values ​​(0 - 100) are not used and the two handlers come into
+  contact, they start jumping to different positions. When analysing with dev
+  tools in the browser, I noticed that the handler's left (style) value changes
+  by as much as the min or max value was specified, again depending on which
+  handler was moving. For example, if I have rangeValues: number[] = [18, 366];
+  min: number = 18; max: number = 366; then for example if I move rangeValues[0]
+  to rangeValues[1] handler (from min to max), it will change left of
+  rangeValues[0] handler to 366% and vice versa to 18% if rangeValues[1] handler
+  is moved to the position of rangeValues[0] handler. The same goes if the
+  values ​​are in different positions, but in this case they do not change by
+  max min.
 </p>
 
 <div style="margin: 10px 20px">
   <p-slider
     [(ngModel)]="rangeValues"
     [range]="true"
-    [min]="10"
-    [max]="300"
+    [min]="18"
+    [max]="366"
   ></p-slider>
 </div>
