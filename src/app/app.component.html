@@ -1,0 +1,18 @@
+<h2>PrimeNG Issue Template</h2>
+<h2>
+  Slider: The slider when I reset the values the style of the bar is not
+  modified.
+</h2>
+<p>
+  When you reset the values in the range slider the bar style is not modified,
+  but the sliders do return to the set position.
+</p>
+
+<div style="margin: 10px 20px">
+  <p-slider
+    [(ngModel)]="rangeValues"
+    [range]="true"
+    [min]="10"
+    [max]="300"
+  ></p-slider>
+</div>
